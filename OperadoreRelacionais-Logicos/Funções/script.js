@@ -20,3 +20,10 @@ let retorno = pedirCopoAgua()
 console.log(retorno)
 
 //3) Ir ao mercado comprar arroz;
+function irMercadoComprarArroz(dinheiro) {
+    return "arroz"
+    
+}
+
+let retorno = irMercadoComprarArroz(10)
+console.log(retorno)
