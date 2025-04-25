@@ -29,20 +29,27 @@
               class="form-control mr-2"
               type="text"
               placeholder="Pesquise um nome"
+              id="campoNome"
             />
 
             <input
               class="btn btn-primary mr-2"
               type="submit"
               value="Pesquisar"
+              onclick="pesquisarNomes()"
             />
 
-            <input class="btn btn-warning" type="submit" value="carregar" />
+            <input
+              class="btn btn-warning"
+              type="submit"
+              value="carregar"
+              onclick="carregarNomes()"
+            />
           </div>
 
           <hr />
 
-          <ul class="list-group">
+          <ul class="list-group" id="lista">
             <li class="list-group-item">Nenhum nome...</li>
           </ul>
         </div>
