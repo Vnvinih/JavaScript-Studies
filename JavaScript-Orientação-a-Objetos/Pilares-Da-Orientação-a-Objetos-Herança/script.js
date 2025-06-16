@@ -3,10 +3,10 @@
 
 class Animal {
   // SuperClasse
-  constructor() {
-    this.cor = "";
-    this.tamanho = 0;
-    this.peso = 0;
+  constructor(pCor, pTamanho, pPeso) {
+    this.cor = pCor;
+    this.tamanho = pTamanho;
+    this.peso = pPeso;
   }
   correr() {
     console.log("correr");
@@ -22,9 +22,9 @@ class Animal {
 
 class Cao extends Animal {
   // SubClasse
-  constructor() {
-    super();
-    this.tamanhoOrelha = 0;
+  constructor(pCor, pTamanho, pPeso, pOrelha) {
+    super(pCor, pTamanho, pPeso);
+    this.tamanhoOrelha = pOrelha;
   }
   correr() {
     super.correr();
@@ -39,23 +39,39 @@ class Cao extends Animal {
 
 class Passaro extends Animal {
   // SubClasse
+  constructor(pCor, pTamanho, pPeso) {
+    super(pCor, pTamanho, pPeso);
+  }
+  correr() {
+    super.correr();
+    console.log("passaro");
+    // 5 linhas
+  }
+
   voar() {
     console.log("voar");
   }
 }
 
 class Papagaio extends Passaro {
+  constructor(pCor, pTamanho, pPeso, pFalar) {
+    super(pCor, pTamanho, pPeso);
+    this.sabeFalar = pFalar;
+  }
   falar() {
     console.log("falar");
   }
 }
 
 // Instancia
-const cao = new Cao();
-// const passaro = new Passaro();
-// const papagaio = new Papagaio();
+// const animal = new Animal("Amarelo", 60, 3);
 
-cao.correr();
+// console.log(animal.peso);
+// const cao = new Cao("Amarelo", 60, 3, 5);
+// console.log(cao.tamanhoOrelha);
+// const passaro = new Passaro();
+const papagaio = new Papagaio("vermelho", 20, 1, true);
+console.log(papagaio.cor);
 
 /*
 papagaio.correr(); // Animal
